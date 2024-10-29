@@ -1,0 +1,19 @@
+services:
+  node-frontend:
+    image: dev-node
+    build: .
+    container_name: dev-router
+    volumes:
+      - ./frontend:/frontend
+
+    tty: true
+    stdin_open: true
+
+    restart: "no"
+
+    working_dir: /frontend
+    #command: ["bash"]
+    #command: ["bash", "-c", "npm install && npm run dev"]
+
+    ports:
+      - 8000:8000
