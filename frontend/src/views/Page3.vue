@@ -10,5 +10,5 @@
 import { ref } from 'vue'
 import { useRoute } from 'vue-router'
 const route = useRoute();
-const msg = ref( route.params.msg );
+const msg = ref( route.query.msg );
 </script>

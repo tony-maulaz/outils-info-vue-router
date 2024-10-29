@@ -11,5 +11,5 @@ import { ref } from 'vue'
 import { useRoute } from 'vue-router'
 const route = useRoute()
 
-const msg = ref(route.params.msg)
+const msg = route.params.msg ? ref(route.params.msg) : ref("Pas de params");
 </script>
