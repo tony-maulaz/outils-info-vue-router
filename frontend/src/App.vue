@@ -1,14 +1,6 @@
   <template>
   <div>
     <h1>Le titre de la page principale</h1>
-    <nav>
-      <router-link to="/">Page 1</router-link>
-      <router-link to="/page2/Bonjour">Page 2</router-link>
-      <router-link to="/page3?msg=Hello">Page 3</router-link>
-    </nav>
-    <router-view class="router"/>
-    <button @click="changePage(2)">Page 2</button>
-    <button @click="changePage(3)">Page 3</button>
   </div>
 </template>
 
@@ -17,12 +9,6 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter()
 
-function changePage(page) {
-  if(page == 2)
-    router.push(`/page${page}/Un message`)
-  else if(page == 3)
-    router.push(`/page${page}?msg=Un message`)
-}
 </script>
 
 <style>
